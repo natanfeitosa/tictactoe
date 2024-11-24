@@ -18,7 +18,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: Array.from(new Bun.Glob(resolve(frontRoot, "*.html")).scanSync()),
+      // input: Array.from(new Bun.Glob(resolve(frontRoot, "*.html")).scanSync()),
       output: { dir: resolve(frontRoot, "../dist/front") },
     },
     emptyOutDir: true,
