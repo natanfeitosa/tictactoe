@@ -13,7 +13,7 @@ let rooms: Map<string, Room> = new Map();
 let resetRoom: Map<string, { requestedBy: string }> = new Map();
 let players = new Map<string, { symbol: Player; ws: any; roomId: string }>();
 
-const PORT = Bun.env.VITE_BACK_PORT || 3000;
+const PORT = Bun.env.VITE_BACK_PORT || Bun.env.PORT || 3000;
 
 const app = new Elysia().use(cors());
 initiateStatics(app);
